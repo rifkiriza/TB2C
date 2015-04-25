@@ -10,5 +10,5 @@ package org.netbeansmodul.TB2C;
  * @author Riza7
  */
 public class KontrolKelas {
-    
+    //salamcintabeh
 }
