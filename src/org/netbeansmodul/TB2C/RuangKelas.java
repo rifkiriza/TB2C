@@ -11,7 +11,7 @@ import org.openide.awt.ActionID;
 import org.openide.awt.ActionReference;
 import org.openide.awt.ActionRegistration;
 import org.openide.util.NbBundle.Messages;
-
+//cok
 @ActionID(
         category = "TB2C",
         id = "org.netbeansmodul.TB2C.RuangKelas"
