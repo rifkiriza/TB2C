@@ -271,5 +271,106 @@ public class KontrolKelas {
         }
     }
     
+     //Kenyamanan Ruang Kelas
+    String analisisKebisingan() {
+        System.out.println("\n - Kenyamanan Ruang Kelas -");
+        System.out.println("\nKebisingan    : ");
+        Laptop.setKebisingan(in.nextLine());
+        if (Laptop.getKebisingan().equals("tidak bising")) {
+            System.out.println("\nSesuai");
+            return "Sesuai";
+        } else {
+            System.out.println("\nTidak Sesuai");
+            return "Tidak Sesuai";
+        }
+    }
+
+    String analisisbau() {
+        System.out.println("\nBau   : ");
+        Laptop.setBau(in.nextLine());
+        if (Laptop.getBau().equals("tidak bau")) {
+            System.out.println("\nSesuai");
+            return "Sesuai";
+        } else {
+            System.out.println("\nTidak Sesuai");
+            return "Tidak Sesuai";
+        }
+    }
+
+    String analisisKebocoran() {
+        System.out.println("\nKebocoran     : ");
+        Laptop.setKebocoran(in.nextLine());
+        if (Laptop.getKebocoran().equals("tidak bocor")) {
+            System.out.println("\nSesuai");
+            return "Sesuai";
+        } else {
+            System.out.println("\nTidak Sesuai");
+            return "Tidak Sesuai";
+        }
+    }
+
+    String analisisKerusakan() {
+        System.out.println("\nKerusakan     : ");
+        Laptop.setKerusakan(in.nextLine());
+        if (Laptop.getKerusakan().equals("tidak rusak")) {
+            System.out.println("\nSesuai");
+            return "Sesuai";
+        } else {
+            System.out.println("\nTidak Sesuai");
+            return "Tidak Sesuai";
+        }
+    }
+
+    String analisisKeausan() {
+        System.out.println("\nKeausan   : ");
+        Laptop.setKeausan(in.nextLine());
+        if (Laptop.getKeausan().equals("tidak aus")) {
+            System.out.println("\nSesuai");
+            return "Sesuai";
+        } else {
+            System.out.println("\nTidak Sesuai");
+            return "Tidak Sesuai";
+        }
+    }
+
+    //Keamanan Ruang Kelas
+    String anaisisKekokohan() {
+        System.out.println("\n - Keamanan Ruang Kelas -");
+        System.out.println("\nKekokohan     : ");
+        Laptop.setKekokohan(in.next());
+        if (Laptop.getKekokohan().equals("kokoh")) {
+            System.out.println("\nSesuai");
+            return "Sesuai";
+        } else {
+            System.out.println("\nTidak Sesuai");
+            return "Tidak Sesuai";
+        }
+    }
+
+    String analisisKunciPintudanJendela() {
+        System.out.println("\nKunci Pintu dan Jendela : ");
+        Laptop.setKunciJendela(in.next());
+        if (Laptop.getKunciJendela().equals("ada")) {
+            System.out.println("\nSesuai");
+            return "Sesuai";
+        } else {
+            System.out.println("\nTidak Sesuai");
+            return "Tidak Sesuai";
+        }
+    }
+
+    String analisisKeamananRuang() {
+        System.out.println("\nKeamanan  : ");
+        Laptop.setAman(in.next());
+        if (Laptop.getAman().equals("aman")) {
+            System.out.println("\nSesuai");
+            return "Sesuai";
+        } else {
+            System.out.println("\nTidak Sesuai");
+            return "Tidak Sesuai";
+        }
+
+    }
 }
+    
 
