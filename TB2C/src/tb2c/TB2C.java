@@ -16,7 +16,7 @@ public class TB2C {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        //Rifki Ainul Riza
+        //Rifki Ainul Rizaasasaas
     }
     
 }
