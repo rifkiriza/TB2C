@@ -26,7 +26,7 @@ public class RuangKelas {
     double HitungRasioLuas;
     private int panjang;
     private int lebar;
-    private int jmlKursi;
+    private int jmlKursi;//coba
     private int jmlPintu;
     private int jmlJendela;
     
