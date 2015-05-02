@@ -4,5 +4,8 @@
  * and open the template in the editor.
  */
 package org.netbeans.modules.TB2C;
-
-//rifki
+public class KontrolKelas {
+public static void main (String args[]){
+int i;
+}
+}
