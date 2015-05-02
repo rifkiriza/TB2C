@@ -5,4 +5,9 @@
  */
 package org.netbeans.modules.TB2C;
 
+public class KontrolKelas {
 
+    public static void main(String args[]) {
+        int i;
+    }
+}
