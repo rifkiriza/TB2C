@@ -194,7 +194,7 @@ public class KontrolKelas {
             return "Sesuai";
         } else {
             System.out.println("\nTidak Sesuai");
-            return "Tidak Sesuai";
+            return "Tidak Sesuai";//**
         }
     }
 
