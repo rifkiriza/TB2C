@@ -8,28 +8,27 @@ package org.netbeans.modules.TB2C;
 public class RuangKelas {
 
     /**
-     * @param args the command line arguments
-public class RuangKelas {
-
-    /**
+     * @param args the command line arguments public class RuangKelas {
+     *
+     * /
+     **
      * @param args the command line arguments
      */
-    
     //Identitas Ruang Kelas
     private String namaRuang;
     private String lokasi;
     private String fakultas;
-    
+
     //Kondisi Ruang Kelas
-    double HitungLuasRuang;
-    double HitungBentukRuang;
-    double HitungRasioLuas;
+    private double HitungLuasRuang;
+    private double HitungBentukRuang;
+    private double HitungRasioLuas;
     private int panjang;
     private int lebar;
     private int jmlKursi;
     private int jmlPintu;
     private int jmlJendela;
-    
+
     //Jumlah, Kondisi dan Posisi Sarana
     private int jmlStopKontak;
     private int kondStopKontak;
@@ -51,27 +50,27 @@ public class RuangKelas {
     private int jmlCCTV;
     private int kondCCTV;
     private int posCCTV;
-    
+
     //Lingkungan Ruang Kelas
     private String kondLantai;
     private String kondDinding;
     private String kondAtap;
     private String kondPintu;
     private String kondJendela;
-    
+
     //Kebersihan Ruang Kelas
     private String sirkulasiUdara;
     private int pencahayaan;
     private int kelembapan;
     private int suhu;
-    
+
     //Kenyamanan Ruang Kelas
     private String kebisingan;
     private String bau;
     private String kebocoran;
     private String kerusakan;
     private String keausan;
-    
+
     //Keamanan Ruang Kelas
     private String kekokohan;
     private String kunciPintu;
@@ -446,15 +445,28 @@ public class RuangKelas {
         this.aman = aman;
     }
 
-    double Luas() {
-        HitungLuasRuang = panjang * lebar;
+    public double getHitungLuasRuang() {
         return HitungLuasRuang;
     }
 
-    double Rasio() {
-        HitungRasioLuas = HitungLuasRuang / jmlKursi;
+    public void setHitungLuasRuang(double HitungLuasRuang) {
+        this.HitungLuasRuang = HitungLuasRuang;
+    }
+
+    public double getHitungBentukRuang() {
+        return HitungBentukRuang;
+    }
+
+    public void setHitungBentukRuang(double HitungBentukRuang) {
+        this.HitungBentukRuang = HitungBentukRuang;
+    }
+
+    public double getHitungRasioLuas() {
         return HitungRasioLuas;
     }
 
-}
+    public void setHitungRasioLuas(double HitungRasioLuas) {
+        this.HitungRasioLuas = HitungRasioLuas;
+    }
 
+}
