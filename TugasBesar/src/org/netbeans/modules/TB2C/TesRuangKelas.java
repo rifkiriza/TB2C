@@ -7,61 +7,97 @@ package org.netbeans.modules.TB2C;
 
 import java.util.Scanner;
 
-/**
- *
- * @author Riza7
- */
-public class TesRuangKelas {
+
+  public class TesRuangKelas {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        KontrolKelas Laptop = new KontrolKelas();
-
-        //Identitas Ruang Kelas
-        String nama, lokasi;
-        System.out.println(" - Identias Ruang Kelas -\n");
-        System.out.println("Nama Ruang      : ");
-        nama = in.nextLine();
-        System.out.println("Lokasi Ruang    : ");
-        lokasi = in.nextLine();
-        System.out.println("Nama Fakultas   : ");
-        lokasi = in.nextLine();
+        CetakKelas Laptop = new CetakKelas();
+        
+        
+        
+        //identitas Ruang Kelas
+        Laptop.identitasRuang();
 
         //Kondisi Ruang Kelas
-        Laptop.hitungLuasRuang();
-        Laptop.hitungBentukRuang();
-        Laptop.hitungRasioLuas();
-        Laptop.analisisPintuDanJendela();
-
+        Laptop.PerhitunganKelas();
+        Laptop.AnalisisLuasRuang();
+        Laptop.CetakLuasKelas();
+        Laptop.AnalisisRasioLuas();
+        Laptop.CetakRasioRuangKelas();
+        Laptop.JumlahPintuDanJendela();
+        Laptop.CetakJumlahPintudanJendela();
+        Laptop.AnalisisJumlahPintudanJendela();
+        
         //Jumlah, Kondisi dan Posisi Sarana
-        Laptop.analisisKelistrikan();
-        Laptop.analisisLCD();
-        Laptop.analisisLampu();
-        Laptop.analisisKipasAngin();
-        Laptop.analisisAC();
-        Laptop.analisisIntrnet();
-        Laptop.analisisCCTV();
-
+        Laptop.Kelistrikan();
+        Laptop.CetakKelistrikan();
+        Laptop.AnalisisKelistrikan();
+        Laptop.LCD();
+        Laptop.CetakLCD();
+        Laptop.AnalisisLCD();
+        Laptop.Lampu();
+        Laptop.CetakLampu();
+        Laptop.AnalisisLampu();
+        Laptop.KipasAngin();
+        Laptop.CetakKipasAngin();
+        Laptop.AnalisisKipasAngin();
+        Laptop.AC();
+        Laptop.CetakAC();
+        Laptop.AnalisisAC();
+        Laptop.Intrnet();
+        Laptop.CetakInternet();
+        Laptop.AnalisisInternet();
+        Laptop.CCTV();
+        Laptop.CetakCCTV();
+        Laptop.AnalisisCCTV();
+        
         //Lingkungan Ruang Kelas
-        Laptop.analisisKebersihan();
+        Laptop.Kebersihan();
+        Laptop.CetakKebersihan();
+        Laptop.AnalisisKebersihan();
 
         //Kebersihan Ruang Kelas
-        Laptop.analisisSirkulasiUdara();
-        Laptop.anaisisPencahayaan();
-        Laptop.analisisKelembapan();
-        Laptop.analisisSuhu();
-
+        Laptop.SirkulasiUdara();
+        Laptop.CetakSirklusiUdara();
+        Laptop.AnalisisSirkulasiUdara();
+        Laptop.Pencahayaan();
+        Laptop.CetakPencahayaan();
+        Laptop.AnalisisPencahayaan();
+        Laptop.Kelembapan();
+        Laptop.CetakKelembapan();
+        Laptop.AnalisisKelembapan();
+        Laptop.Suhu();
+        Laptop.CetakSuhu();
+        Laptop.AnalisisSuhu();
+        
         //Kenyamanan Ruang Kelas
-        Laptop.analisisKebisingan();
-        Laptop.analisisbau();
-        Laptop.analisisKebocoran();
-        Laptop.analisisKerusakan();
-        Laptop.analisisKeausan();
-
+        Laptop.Kebisingan();
+        Laptop.CetakKebisingan();
+        Laptop.AnalisisKebisingan();
+        Laptop.Bau();
+        Laptop.CetakBau();
+        Laptop.AnalisisBau();
+        Laptop.Kebocoran();
+        Laptop.CetakKebocoran();
+        Laptop.AnalisisKebocoran();
+        Laptop.Kerusakan();
+        Laptop.CetakKerusakan();
+        Laptop.AnalisisKerusakan();
+        Laptop.Keausan();
+        Laptop.CetakKeausan();
+        Laptop.AnalisisKeausan();
+        
         //Keamanan Ruang Kelas
-        Laptop.anaisisKekokohan();
-        Laptop.analisisKunciPintudanJendela();
-        Laptop.analisisKeamananRuang();
+        Laptop.Kekokohan();
+        Laptop.CetakKekokohan();
+        Laptop.AnalisisKekokohan();
+        Laptop.KunciPintudanJendela();
+        Laptop.CetakKunciPintuJendela();
+        Laptop.AnalisisKunciPintudanJendela();
+        Laptop.KeamananRuang();
+        Laptop.CetakKeamanan();
+        Laptop.AnalisisKeamananRuang();
         
        
     }
