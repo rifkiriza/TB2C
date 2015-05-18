@@ -7,17 +7,24 @@ package org.netbeans.modules.TB2C;
 
 import java.util.Scanner;
 
-
-  public class TesRuangKelas {
+/**
+ *
+ * @author Gangga
+ */
+public class TesRuangKelas {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        CetakKelas Laptop = new CetakKelas();
-        
-        
-        
+        CetakKelas Laptop = new CetakKelas(null, null);
+
         //identitas Ruang Kelas
-        Laptop.identitasRuang();
+        System.out.println("Apakah Anda Mahasiswa Fakultas Teknik Informatika :         - ( ya atau tidak ) -");
+        String jawab = in.nextLine();
+        if (jawab.equals("ya")){
+            Laptop.IdentitasKelas(null, null);
+        }else{
+            Laptop.IdentitasKelas(null, null, null);
+        }
 
         //Kondisi Ruang Kelas
         Laptop.PerhitunganKelas();
@@ -28,7 +35,7 @@ import java.util.Scanner;
         Laptop.JumlahPintuDanJendela();
         Laptop.CetakJumlahPintudanJendela();
         Laptop.AnalisisJumlahPintudanJendela();
-        
+
         //Jumlah, Kondisi dan Posisi Sarana
         Laptop.Kelistrikan();
         Laptop.CetakKelistrikan();
@@ -51,7 +58,7 @@ import java.util.Scanner;
         Laptop.CCTV();
         Laptop.CetakCCTV();
         Laptop.AnalisisCCTV();
-        
+
         //Lingkungan Ruang Kelas
         Laptop.Kebersihan();
         Laptop.CetakKebersihan();
@@ -70,7 +77,7 @@ import java.util.Scanner;
         Laptop.Suhu();
         Laptop.CetakSuhu();
         Laptop.AnalisisSuhu();
-        
+
         //Kenyamanan Ruang Kelas
         Laptop.Kebisingan();
         Laptop.CetakKebisingan();
@@ -87,7 +94,7 @@ import java.util.Scanner;
         Laptop.Keausan();
         Laptop.CetakKeausan();
         Laptop.AnalisisKeausan();
-        
+
         //Keamanan Ruang Kelas
         Laptop.Kekokohan();
         Laptop.CetakKekokohan();
@@ -98,7 +105,6 @@ import java.util.Scanner;
         Laptop.KeamananRuang();
         Laptop.CetakKeamanan();
         Laptop.AnalisisKeamananRuang();
-        
-       
+
     }
 }
