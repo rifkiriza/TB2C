@@ -11,9 +11,13 @@ package org.netbeans.modules.TB2C;
  */
 public class AnalisisKelas extends KontrolKelas {
 
+    public AnalisisKelas(String namaRuang, String lokasi) {
+        super(namaRuang, lokasi);
+    }
+
     String AnalisisLuasRuang() {
-        Laptop.setHitungLuasRuang(Laptop.getPanjang() * Laptop.getLebar());
-        if (Laptop.getPanjang() != Laptop.getLebar()) {
+        setHitungLuasRuang(HitungLuas());
+        if (getPanjang() != getLebar()) {
             System.out.println("\nSesuai");
             return "Sesuai";
         } else {
@@ -24,8 +28,8 @@ public class AnalisisKelas extends KontrolKelas {
     }
 
     String AnalisisRasioLuas() {
-        Laptop.setHitungRasioLuas(Laptop.getHitungLuasRuang() / Laptop.getJmlKursi());
-        if (Laptop.getHitungRasioLuas() >= 0.5) {
+        setHitungRasioLuas(HitungRasio());
+        if (getHitungRasioLuas() >= 0.5) {
             System.out.println("\nSesuai");
             return "Sesuai";
         } else {
@@ -35,7 +39,7 @@ public class AnalisisKelas extends KontrolKelas {
     }
 
     String AnalisisJumlahPintudanJendela() {
-        if (Laptop.getJmlPintu() == 2 && Laptop.getJmlJendela() == 2 || Laptop.getJmlJendela() == 3) {
+        if (getJmlPintu() == 2 && getJmlJendela() == 2 || getJmlJendela() == 3) {
             System.out.println("\nSesuai");
             return "Sesuai";
         } else {
@@ -46,7 +50,7 @@ public class AnalisisKelas extends KontrolKelas {
     }
 
     String AnalisisKelistrikan() {
-        if (Laptop.getJmlStopKontak() == 2 || Laptop.getJmlStopKontak() == 3 && Laptop.getKondStopKontak() == 1 && Laptop.getPosStopKontak() == 1) {
+        if (getJmlStopKontak() == 2 || getJmlStopKontak() == 3 && getKondStopKontak() == 1 && getPosStopKontak() == 1) {
             System.out.println("\nSesuai");
             return "Sesuai";
         } else {
@@ -56,7 +60,7 @@ public class AnalisisKelas extends KontrolKelas {
     }
 
     String AnalisisLCD() {
-        if (Laptop.getJmlKblLCD() == 2 && Laptop.getKondKabelLCD() == 1 && Laptop.getPosKabelLCD() == 1) {
+        if (getJmlKblLCD() == 2 && getKondKabelLCD() == 1 && getPosKabelLCD() == 1) {
             System.out.println("\nSesuai");
             return "Sesuai";
         } else {
@@ -67,7 +71,7 @@ public class AnalisisKelas extends KontrolKelas {
     }
 
     String AnalisisLampu() {
-        if (Laptop.getJmlLampu() == 2 || Laptop.getJmlLampu() == 3 && Laptop.getKondLampu() == 1 && Laptop.getPosLampu() == 1) {
+        if (getJmlLampu() == 2 || getJmlLampu() == 3 && getKondLampu() == 1 && getPosLampu() == 1) {
             System.out.println("\nSesuai");
             return "Sesuai";
         } else {
@@ -78,7 +82,7 @@ public class AnalisisKelas extends KontrolKelas {
 
     String AnalisisKipasAngin() {
 
-        if (Laptop.getJmlKipas() == 2 || Laptop.getJmlKipas() == 3 && Laptop.getKondKipas() == 1 && Laptop.getPosKipas() == 1) {
+        if (getJmlKipas() == 2 || getJmlKipas() == 3 && getKondKipas() == 1 && getPosKipas() == 1) {
             System.out.println("\nSesuai");
             return "Sesuai";
         } else {
@@ -90,7 +94,7 @@ public class AnalisisKelas extends KontrolKelas {
 
     String AnalisisAC() {
 
-        if (Laptop.getJmlAC() == 2 || Laptop.getJmlAC() == 3 && Laptop.getKondAC() == 1 && Laptop.getPosAC() == 1) {
+        if (getJmlAC() == 2 || getJmlAC() == 3 && getKondAC() == 1 && getPosAC() == 1) {
             System.out.println("\nSesuai");
             return "Sesuai";
         } else {
@@ -100,7 +104,7 @@ public class AnalisisKelas extends KontrolKelas {
     }
 
     String AnalisisInternet() {
-        if (Laptop.getSSID() == 1 && Laptop.getBandwidth() == 1) {
+        if (getSSID() == 1 && getBandwidth() == 1) {
             System.out.println("\nSesuai");
             return "Sesuai";
         } else {
@@ -110,7 +114,7 @@ public class AnalisisKelas extends KontrolKelas {
     }
 
     String AnalisisCCTV() {
-        if (Laptop.getJmlCCTV() == 3 && Laptop.getKondCCTV() == 1 && Laptop.getPosCCTV() == 1 || Laptop.getPosCCTV() == 3) {
+        if (getJmlCCTV() == 3 && getKondCCTV() == 1 && getPosCCTV() == 1 || getPosCCTV() == 3) {
             System.out.println("\nSesuai");
             return "Sesuai";
         } else {
@@ -120,143 +124,143 @@ public class AnalisisKelas extends KontrolKelas {
     }
 
     String AnalisisKebersihan() {
-        if (Laptop.getKondLantai().equals("bersih") && Laptop.getKondDinding().equals("bersih") && Laptop.getKondAtap().equals("bersih")
-                && Laptop.getKondPintu().equals("bersih") && Laptop.getKondJendela().equals("bersih")) {
+        if (getKondLantai().equals("bersih") && getKondDinding().equals("bersih") && getKondAtap().equals("bersih")
+                && getKondPintu().equals("bersih") && getKondJendela().equals("bersih")) {
             System.out.println("\nSesuai");
             return "Sesuai";
         } else {
             System.out.println("\nTidak Sesuai");
             return "Tidak Sesuai";
         }
-    }
-    
-    String AnalisisSirkulasiUdara(){
-    if (Laptop.getSirkulasiUdara().equals("lancar")) {
-            System.out.println("\nSesuai");
-            return "Sesuai";
-        } else {
-            System.out.println("\nTidak Sesuai");
-            return "Tidak Sesuai";
-        }
-    }
-    
-    String AnalisisPencahayaan (){
-    if (Laptop.getPencahayaan() >= 250 && Laptop.getPencahayaan() <= 350) {
-            System.out.println("\nSesuai");
-            return "Sesuai";
-        } else {
-            System.out.println("\nTidak Sesuai");
-            return "Tidak Sesuai";
-        }
-    }
-    String AnalisisKelembapan(){
-        if (Laptop.getKelembapan() >= 70 && Laptop.getKelembapan() <= 80) {
-            System.out.println("\nSesuai");
-            return "Sesuai";
-        } else {
-            System.out.println("\nTidak Sesuai");
-            return "Tidak Sesuai";
-        }
-    }
-    String AnalisisSuhu() {
-    if (Laptop.getSuhu() >= 25 && Laptop.getSuhu() <= 35) {
-            System.out.println("\nSesuai");
-            return "Sesuai";
-        } else {
-            System.out.println("\nTidak Sesuai");
-            return "Tidak Sesuai";
-        }
-    
-    }
-    
-    String AnalisisKebisingan() {
-    if (Laptop.getKebisingan().equals("tidak bising")) {
-            System.out.println("\nSesuai");
-            return "Sesuai";
-        } else {
-            System.out.println("\nTidak Sesuai");
-            return "Tidak Sesuai";
-        }
-    }
-    
-    String AnalisisBau(){
-    
-    if (Laptop.getBau().equals("tidak bau")) {
-            System.out.println("\nSesuai");
-            return "Sesuai";
-        } else {
-            System.out.println("\nTidak Sesuai");
-            return "Tidak Sesuai";
-        }
-    }
-    
-    String AnalisisKebocoran (){
-        if (Laptop.getKebocoran().equals("tidak bocor")) {
-            System.out.println("\nSesuai");
-            return "Sesuai";
-        } else {
-            System.out.println("\nTidak Sesuai");
-            return "Tidak Sesuai";
-        }
-    
-    }
-    
-    String AnalisisKerusakan (){
-        
-        if (Laptop.getKerusakan().equals("tidak rusak")) {
-            System.out.println("\nSesuai");
-            return "Sesuai";
-        } else {
-            System.out.println("\nTidak Sesuai");
-            return "Tidak Sesuai";
-        }
-    
-    }
-    
-    String AnalisisKeausan (){
-        
-        if (Laptop.getKeausan().equals("tidak aus")) {
-            System.out.println("\nSesuai");
-            return "Sesuai";
-        } else {
-            System.out.println("\nTidak Sesuai");
-            return "Tidak Sesuai";
-        }
-    
-    }
-    
-    String AnalisisKekokohan (){
-    if (Laptop.getKekokohan().equals("kokoh")) {
-            System.out.println("\nSesuai");
-            return "Sesuai";
-        } else {
-            System.out.println("\nTidak Sesuai");
-            return "Tidak Sesuai";
-        }
-    }
-    
-    String AnalisisKunciPintudanJendela(){
-    if (Laptop.getKunciJendela().equals("ada")) {
-            System.out.println("\nSesuai");
-            return "Sesuai";
-        } else {
-            System.out.println("\nTidak Sesuai");
-            return "Tidak Sesuai";
-        }
-    
-    }
-    
-    String AnalisisKeamananRuang(){
-    if (Laptop.getAman().equals("aman")) {
-            System.out.println("\nSesuai");
-            return "Sesuai";
-        } else {
-            System.out.println("\nTidak Sesuai");
-            return "Tidak Sesuai";
-        }
-    
-    
     }
 
+    String AnalisisSirkulasiUdara() {
+        if (getSirkulasiUdara().equals("lancar")) {
+            System.out.println("\nSesuai");
+            return "Sesuai";
+        } else {
+            System.out.println("\nTidak Sesuai");
+            return "Tidak Sesuai";
+        }
+    }
+
+    String AnalisisPencahayaan() {
+        if (getPencahayaan() >= 250 && getPencahayaan() <= 350) {
+            System.out.println("\nSesuai");
+            return "Sesuai";
+        } else {
+            System.out.println("\nTidak Sesuai");
+            return "Tidak Sesuai";
+        }
+    }
+
+    String AnalisisKelembapan() {
+        if (getKelembapan() >= 70 && getKelembapan() <= 80) {
+            System.out.println("\nSesuai");
+            return "Sesuai";
+        } else {
+            System.out.println("\nTidak Sesuai");
+            return "Tidak Sesuai";
+        }
+    }
+
+    String AnalisisSuhu() {
+        if (getSuhu() >= 25 && getSuhu() <= 35) {
+            System.out.println("\nSesuai");
+            return "Sesuai";
+        } else {
+            System.out.println("\nTidak Sesuai");
+            return "Tidak Sesuai";
+        }
+
+    }
+
+    String AnalisisKebisingan() {
+        if (getKebisingan().equals("tidak bising")) {
+            System.out.println("\nSesuai");
+            return "Sesuai";
+        } else {
+            System.out.println("\nTidak Sesuai");
+            return "Tidak Sesuai";
+        }
+    }
+
+    String AnalisisBau() {
+
+        if (getBau().equals("tidak bau")) {
+            System.out.println("\nSesuai");
+            return "Sesuai";
+        } else {
+            System.out.println("\nTidak Sesuai");
+            return "Tidak Sesuai";
+        }
+    }
+
+    String AnalisisKebocoran() {
+        if (getKebocoran().equals("tidak bocor")) {
+            System.out.println("\nSesuai");
+            return "Sesuai";
+        } else {
+            System.out.println("\nTidak Sesuai");
+            return "Tidak Sesuai";
+        }
+
+    }
+
+    String AnalisisKerusakan() {
+
+        if (getKerusakan().equals("tidak rusak")) {
+            System.out.println("\nSesuai");
+            return "Sesuai";
+        } else {
+            System.out.println("\nTidak Sesuai");
+            return "Tidak Sesuai";
+        }
+
+    }
+
+    String AnalisisKeausan() {
+
+        if (getKeausan().equals("tidak aus")) {
+            System.out.println("\nSesuai");
+            return "Sesuai";
+        } else {
+            System.out.println("\nTidak Sesuai");
+            return "Tidak Sesuai";
+        }
+
+    }
+
+    String AnalisisKekokohan() {
+        if (getKekokohan().equals("kokoh")) {
+            System.out.println("\nSesuai");
+            return "Sesuai";
+        } else {
+            System.out.println("\nTidak Sesuai");
+            return "Tidak Sesuai";
+        }
+    }
+
+    String AnalisisKunciPintudanJendela() {
+        if (getKunciJendela().equals("ada")) {
+            System.out.println("\nSesuai");
+            return "Sesuai";
+        } else {
+            System.out.println("\nTidak Sesuai");
+            return "Tidak Sesuai";
+        }
+
+    }
+
+    String AnalisisKeamananRuang() {
+        if (getAman().equals("aman")) {
+            System.out.println("\nSesuai");
+            return "Sesuai";
+        } else {
+            System.out.println("\nTidak Sesuai");
+            return "Tidak Sesuai";
+        }
+
+    }
 
 }
