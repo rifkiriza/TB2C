@@ -8,32 +8,54 @@ package org.netbeans.modules.TB2C;
 import java.util.Scanner;
 
 
-public class KontrolKelas {
+public class KontrolKelas extends RuangKelas implements InterfaceKelas {
 
-    RuangKelas Laptop = new RuangKelas();
     Scanner in = new Scanner(System.in);
+
+    public KontrolKelas(String namaRuang, String lokasi) {
+        super(namaRuang, lokasi);
+    }
+
+    @Override
+    void IdentitasKelas(String namaRuang, String lokasi) {
+        System.out.println("\n - Identias Ruang Kelas -\n");
+        System.out.println("Nama Ruang      : ");
+        setNamaRuang(in.nextLine());
+        System.out.println("Lokasi Ruang    : ");
+        setLokasi(in.nextLine());
+    }
+
+    @Override
+    void IdentitasKelas(String namaRuang, String lokasi, String fakultas) {
+        System.out.println("\n - Identias Ruang Kelas -\n");
+        System.out.println("Nama Ruang      : ");
+        setNamaRuang(in.nextLine());
+        System.out.println("Lokasi Ruang    : ");
+        setLokasi(in.nextLine());
+        System.out.println("Nama Fakultas   : ");
+        setFakultas(in.nextLine());
+    }
 
     //Identitas Ruang Kelas
     void identitasRuang() {
-        String nama, lokasi;
         System.out.println(" - Identias Ruang Kelas -\n");
         System.out.println("Nama Ruang      : ");
-        nama = in.nextLine();
+        setNamaRuang(in.nextLine());
         System.out.println("Lokasi Ruang    : ");
-        lokasi = in.nextLine();
+        setLokasi(in.nextLine());
         System.out.println("Nama Fakultas   : ");
-        lokasi = in.nextLine();
+        setFakultas(in.nextLine());
     }
 
     //Kondisi Ruang Kelas
     void PerhitunganKelas() {
         System.out.println("\n - Kondisi Ruang Kelas - \n");
         System.out.println("Panjang Ruang       : ");
-        Laptop.setPanjang(in.nextInt());
+        setPanjang(in.nextInt());
         System.out.println("Lebar Ruang         : ");
-        Laptop.setLebar(in.nextInt());
+        setLebar(in.nextInt());
         System.out.println("\nJumlah Kursi      : ");
-        Laptop.setJmlKursi(in.nextInt());
+        setJmlKursi(in.nextInt());
 
     }
 
@@ -41,9 +63,9 @@ public class KontrolKelas {
         System.out.println("\nJumlah Pintu        1. 1    2. 2    3. 4");
         System.out.println("Jumlah Jendela      1. 0    2. 1    3. 4");
         System.out.println("\nJumlah Pintu      : ");
-        Laptop.setJmlPintu(in.nextInt());
+        setJmlPintu(in.nextInt());
         System.out.println("Jumlah Jendela  : ");
-        Laptop.setJmlJendela(in.nextInt());
+        setJmlJendela(in.nextInt());
 
     }
 
@@ -54,11 +76,11 @@ public class KontrolKelas {
         System.out.println("Kondisi Stop Kontak     1. Baik                     :  2. Kurang Baik   :  3. Rusak");
         System.out.println("Posisi Stop Kontak      1. Di Pojok dan Dekat Dosen :  2. Di Tengah     :  3. Di Bawah");
         System.out.println("\nJumlah Stop Kontak        : ");
-        Laptop.setJmlStopKontak(in.nextInt());
+        setJmlStopKontak(in.nextInt());
         System.out.println("Kondisi Stop Kontak     : ");
-        Laptop.setKondStopKontak(in.nextInt());
+        setKondStopKontak(in.nextInt());
         System.out.println("Posisi Stop Kontak      : ");
-        Laptop.setPosStopKontak(in.nextInt());
+        setPosStopKontak(in.nextInt());
 
     }
 
@@ -67,11 +89,11 @@ public class KontrolKelas {
         System.out.println("Kondisi Kabel LCD       1. Berfungsi   :   2. Kurang Baik   :   3. Rusak");
         System.out.println("Posisi Kabel LCD        1. Dekat Dosen :   2. Dekat Pintu   :   3. Dekat Lampu");
         System.out.println("\nJumlah Kabel LCD      : ");
-        Laptop.setJmlKblLCD(in.nextInt());
+        setJmlKblLCD(in.nextInt());
         System.out.println("Kondisi Kabel lCD   : ");
-        Laptop.setKondKabelLCD(in.nextInt());
+        setKondKabelLCD(in.nextInt());
         System.out.println("Posisi Kabel LCD    : ");
-        Laptop.setPosKabelLCD(in.nextInt());
+        setPosKabelLCD(in.nextInt());
 
     }
 
@@ -80,11 +102,11 @@ public class KontrolKelas {
         System.out.println("Kondisi Lampu   1. Baik   :   2. Kurang Baik   :   3. Rusak");
         System.out.println("Posisi Lampu    1. Atap   :   2. Bawah         :   3. Samping");
         System.out.println("\nJumlah Lampu      : ");
-        Laptop.setJmlLampu(in.nextInt());
+        setJmlLampu(in.nextInt());
         System.out.println("Kondisi Lampu   : ");
-        Laptop.setKondLampu(in.nextInt());
+        setKondLampu(in.nextInt());
         System.out.println("Posisi Lampu    : ");
-        Laptop.setPosLampu(in.nextInt());
+        setPosLampu(in.nextInt());
     }
 
     void KipasAngin() {
@@ -92,11 +114,11 @@ public class KontrolKelas {
         System.out.println("Kondisi Kipas Angin     1. Baik   :   2. Kurang Baik   :   3. Rusak");
         System.out.println("Posisi Kipas Angin      1. Atap   :   2. Bawah         :   3. Samping");
         System.out.println("\nJumlah Kipas Angin        : ");
-        Laptop.setJmlKipas(in.nextInt());
+        setJmlKipas(in.nextInt());
         System.out.println("Kondisi Kipas Angin     : ");
-        Laptop.setKondKipas(in.nextInt());
+        setKondKipas(in.nextInt());
         System.out.println("Posisi Kipas Angin      : ");
-        Laptop.setPosKipas(in.nextInt());
+        setPosKipas(in.nextInt());
     }
 
     void AC() {
@@ -104,11 +126,11 @@ public class KontrolKelas {
         System.out.println("Kondisi AC      1. Baik    :   2. Kurang Baik   :   3. Rusak");
         System.out.println("Posisi AC       1. Depan   :   2. Samping       :   3. Belakang");
         System.out.println("\nJumlah AC         : ");
-        Laptop.setJmlAC(in.nextInt());
+        setJmlAC(in.nextInt());
         System.out.println("Kondisi AC      : ");
-        Laptop.setKondAC(in.nextInt());
+        setKondAC(in.nextInt());
         System.out.println("Posisi AC       : ");
-        Laptop.setPosAC(in.nextInt());
+        setPosAC(in.nextInt());
 
     }
 
@@ -116,9 +138,9 @@ public class KontrolKelas {
         System.out.println("\nPilih SSID      1. UMM Hotspot  :   2. Riza Hotspot    :  3. Gangga Hotspot   :   4. Adi Hotspot");
         System.out.println("Konektifitas    1. Bisa Login   :   2. Tidak Bisa Login");
         System.out.println("\nPilih SSID        : ");
-        Laptop.setSSID(in.nextInt());
+        setSSID(in.nextInt());
         System.out.println("Konektifitas    : ");
-        Laptop.setBandwidth(in.nextInt());
+        setBandwidth(in.nextInt());
 
     }
 
@@ -127,11 +149,11 @@ public class KontrolKelas {
         System.out.println("Kondisi CCTV    1. Baik    :   2. Kurang Baik    :    3. Rusak");
         System.out.println("Posisi CCTV     1. Depan   :   2. Samping        :    3. Belakang");
         System.out.println("\nJumlah CCTV       : ");
-        Laptop.setJmlCCTV(in.nextInt());
+        setJmlCCTV(in.nextInt());
         System.out.println("Kondisi CCTV    : ");
-        Laptop.setKondCCTV(in.nextInt());
+        setKondCCTV(in.nextInt());
         System.out.println("Posisi CCTV     : ");
-        Laptop.setPosCCTV(in.nextInt());
+        setPosCCTV(in.nextInt());
 
     }
 
@@ -139,15 +161,15 @@ public class KontrolKelas {
     void Kebersihan() {
         System.out.println("\n - Lingkungan Ruang Kelas -");
         System.out.println("\nKondisi Lantai        : ");
-        Laptop.setKondLantai(in.next());
+        setKondLantai(in.next());
         System.out.println("Kondisi Dinding     : ");
-        Laptop.setKondDinding(in.next());
+        setKondDinding(in.next());
         System.out.println("Kondisi Atap        : ");
-        Laptop.setKondAtap(in.next());
+        setKondAtap(in.next());
         System.out.println("Kondisi Pintu       : ");
-        Laptop.setKondPintu(in.next());
+        setKondPintu(in.next());
         System.out.println("Kondisi Jendela     : ");
-        Laptop.setKondJendela(in.next());
+        setKondJendela(in.next());
 
     }
 
@@ -155,25 +177,25 @@ public class KontrolKelas {
     void SirkulasiUdara() {
         System.out.println("\n - Kebersihan Ruang Kelas -");
         System.out.println("\nSirkulasi Udara   : ");
-        Laptop.setSirkulasiUdara(in.next());
+        setSirkulasiUdara(in.next());
 
     }
 
     void Pencahayaan() {
         System.out.println("\nNilai Pencahayaan : ");
-        Laptop.setPencahayaan(in.nextInt());
+        setPencahayaan(in.nextInt());
 
     }
 
     void Kelembapan() {
         System.out.println("\nKelembapan        : ");
-        Laptop.setKelembapan(in.nextInt());
+        setKelembapan(in.nextInt());
 
     }
 
     void Suhu() {
         System.out.println("\nSuhu              : ");
-        Laptop.setSuhu(in.nextInt());
+        setSuhu(in.nextInt());
 
     }
 
@@ -181,31 +203,31 @@ public class KontrolKelas {
     void Kebisingan() {
         System.out.println("\n - Kenyamanan Ruang Kelas -");
         System.out.println("\nKebisingan    : ");
-        Laptop.setKebisingan(in.nextLine());
+        setKebisingan(in.nextLine());
 
     }
 
     void Bau() {
         System.out.println("\nBau   : ");
-        Laptop.setBau(in.nextLine());
+        setBau(in.nextLine());
 
     }
 
     void Kebocoran() {
         System.out.println("\nKebocoran     : ");
-        Laptop.setKebocoran(in.nextLine());
+        setKebocoran(in.nextLine());
 
     }
 
     void Kerusakan() {
         System.out.println("\nKerusakan     : ");
-        Laptop.setKerusakan(in.nextLine());
+        setKerusakan(in.nextLine());
 
     }
 
     void Keausan() {
         System.out.println("\nKeausan   : ");
-        Laptop.setKeausan(in.nextLine());
+        setKeausan(in.nextLine());
 
     }
 
@@ -213,19 +235,32 @@ public class KontrolKelas {
     void Kekokohan() {
         System.out.println("\n - Keamanan Ruang Kelas -");
         System.out.println("\nKekokohan     : ");
-        Laptop.setKekokohan(in.next());
+        setKekokohan(in.next());
 
     }
 
     void KunciPintudanJendela() {
         System.out.println("\nKunci Pintu dan Jendela : ");
-        Laptop.setKunciJendela(in.next());
+        setKunciJendela(in.next());
 
     }
 
     void KeamananRuang() {
         System.out.println("\nKeamanan  : ");
-        Laptop.setAman(in.next());
+        setAman(in.next());
 
     }
+
+    @Override
+    public double HitungRasio() {
+        double Rasio = HitungLuas() / getJmlKursi();
+        return Rasio;
+    }
+
+    @Override
+    public double HitungLuas() {
+        double Luas = getPanjang() * getLebar();
+        return Luas;
+    }
+
 }

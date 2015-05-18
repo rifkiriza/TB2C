@@ -5,7 +5,7 @@
  */
 package org.netbeans.modules.TB2C;
 
-public class RuangKelas {
+public abstract class RuangKelas {
 
     /**
      * @param args the command line arguments public class RuangKelas {
@@ -76,6 +76,22 @@ public class RuangKelas {
     private String kunciPintu;
     private String kunciJendela;
     private String aman;
+
+    public RuangKelas(String namaRuang, String lokasi) {
+        this.namaRuang = namaRuang;
+        this.lokasi = lokasi;
+    }
+
+    void IdentitasKelas(String namaRuang, String lokasi) {
+        this.namaRuang = namaRuang;
+        this.lokasi = lokasi;
+    }
+
+    void IdentitasKelas(String namaRuang, String lokasi, String fakultas) {
+        this.namaRuang = namaRuang;
+        this.lokasi = lokasi;
+        this.fakultas = fakultas;
+    }
 
     public String getNamaRuang() {
         return namaRuang;
@@ -469,4 +485,5 @@ public class RuangKelas {
         this.HitungRasioLuas = HitungRasioLuas;
     }
 
+    public abstract double HitungRasio();
 }
