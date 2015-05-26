@@ -10,16 +10,15 @@ package org.netbeans.modules.TB2C;
  * @author win 8
  */
 public class CetakKelas extends AnalisisKelas {
- public CetakKelas(String namaRuang, String lokasi) {
-        super(namaRuang, lokasi);
-    }
 
+    //Kondisi Ruang Kelas
     void CetakLuasKelas() {
-        System.out.println("\nLuas Ruang Kelas    : " +getHitungLuasRuang());
+        System.out.println("\n - Kondisi Ruang Kelas - \n");
+        System.out.println("\nLuas Ruang Kelas    : " + HitungLuas());
     }
 
     void CetakRasioRuangKelas() {
-        System.out.println("\nRasio Luas      : " + getHitungRasioLuas());
+        System.out.println("\nRasio Luas      : " + HitungRasio());
     }
 
     void CetakJumlahPintudanJendela() {
@@ -27,7 +26,9 @@ public class CetakKelas extends AnalisisKelas {
         System.out.println("\nJumlah Jendela  : " + getJmlJendela());
     }
 
+    //Jumlah, Kondisi dan Posisi Sarana
     void CetakKelistrikan() {
+        System.out.println("\n - Jumlah, Kondisi dan Posisi Sarana -");
         System.out.println("\nJumlah Stop Kontak    : " + getJmlStopKontak());
         System.out.println("\nKondisi Stop Kontak   : " + getKondStopKontak());
         System.out.println("\nPosisi Stop Kontak    : " + getPosStopKontak());
@@ -51,76 +52,85 @@ public class CetakKelas extends AnalisisKelas {
         System.out.println("\nKondisi Kipas Angin   : " + getKondKipas());
         System.out.println("\nPosisi Kipas Angin    : " + getPosKipas());
     }
-    
-    void CetakAC(){
+
+    void CetakAC() {
         System.out.println("\nJumlah AC     : " + getJmlAC());
         System.out.println("\nKondisi AC    : " + getKondAC());
         System.out.println("\nPosisi AC     : " + getPosAC());
     }
-    
-    void CetakInternet(){
+
+    void CetakInternet() {
         System.out.println("\nPilih SSID    : " + getSSID());
         System.out.println("\nKonektifitas  : " + getBandwidth());
     }
-    
-    void CetakCCTV(){
+
+    void CetakCCTV() {
         System.out.println("\nJumlah CCTV   : " + getJmlCCTV());
         System.out.println("\nKondisi CCTV  : " + getKondCCTV());
         System.out.println("\nPosisi CCTV   : " + getPosCCTV());
     }
-    
-    void CetakKebersihan(){
+
+    //Lingkungan Ruang Kelas
+    void CetakKebersihan() {
+        System.out.println("\n - Lingkungan Ruang Kelas -");
         System.out.println("\nKondisi Lantai    : " + getKondLantai());
         System.out.println("\nKondisi Dinding   : " + getKondDinding());
         System.out.println("\nKondisi Atap      : " + getKondAtap());
         System.out.println("\nKondisi Pintu     : " + getKondPintu());
         System.out.println("\nKondisi Jendela   : " + getKondJendela());
     }
-    
-    void CetakSirklusiUdara(){
+
+    //Kebersihan Ruang Kelas
+    void CetakSirklusiUdara() {
+        System.out.println("\n - Kebersihan Ruang Kelas -");
         System.out.println("\nSirklusi Udara    : " + getSirkulasiUdara());
     }
-    
-    void CetakPencahayaan(){
+
+    void CetakPencahayaan() {
         System.out.println("\nPencahayaan   : " + getPencahayaan());
     }
-    void CetakKelembapan(){
+
+    void CetakKelembapan() {
         System.out.println("\nKelembapan    : " + getKelembapan());
     }
-    
-    void CetakSuhu(){
+
+    void CetakSuhu() {
         System.out.println("\nSuhu          : " + getSuhu());
     }
-    
-    void CetakKebisingan(){
+
+    //Kenyamanan Ruang Kelas
+    void CetakKebisingan() {
+        System.out.println("\n - Kenyamanan Ruang Kelas -");
         System.out.println("\nKebisingan    : " + getKebisingan());
     }
-    
-    void CetakBau(){
+
+    void CetakBau() {
         System.out.println("\nBau           : " + getBau());
     }
-    
-    void CetakKebocoran(){
+
+    void CetakKebocoran() {
         System.out.println("\nKebocoran     : " + getKebocoran());
     }
-    
-    void CetakKerusakan(){
+
+    void CetakKerusakan() {
         System.out.println("\nKerusakan     : " + getKerusakan());
     }
-    
-    void CetakKeausan(){
+
+    void CetakKeausan() {
         System.out.println("\nKeausan       : " + getKeausan());
     }
-    
-    void CetakKekokohan(){
+
+    //Keamanan Ruang Kelas
+    void CetakKekokohan() {
+        System.out.println("\n - Keamanan Ruang Kelas -");
         System.out.println("\nKekokohan     : " + getKekokohan());
     }
-    
-    void CetakKunciPintuJendela(){
+
+    void CetakKunciPintuJendela() {
         System.out.println("\nKunci, Pintu dan Jendela : " + getKunciJendela());
     }
-    
-    void CetakKeamanan(){
+
+    void CetakKeamanan() {
         System.out.println("\nKeamanan      : " + getAman());
     }
 }
