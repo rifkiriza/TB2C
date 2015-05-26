@@ -9,12 +9,9 @@ package org.netbeans.modules.TB2C;
  *
  * @author win 8
  */
-public class AnalisisKelas extends KontrolKelas {
+public class AnalisisKelas extends RuangKelas implements InterfaceKelas{
 
-    public AnalisisKelas(String namaRuang, String lokasi) {
-        super(namaRuang, lokasi);
-    }
-
+    @Override
     String AnalisisLuasRuang() {
         setHitungLuasRuang(HitungLuas());
         if (getPanjang() != getLebar()) {
@@ -27,6 +24,7 @@ public class AnalisisKelas extends KontrolKelas {
         }
     }
 
+    @Override
     String AnalisisRasioLuas() {
         setHitungRasioLuas(HitungRasio());
         if (getHitungRasioLuas() >= 0.5) {
@@ -38,6 +36,7 @@ public class AnalisisKelas extends KontrolKelas {
         }
     }
 
+    @Override
     String AnalisisJumlahPintudanJendela() {
         if (getJmlPintu() == 2 && getJmlJendela() == 2 || getJmlJendela() == 3) {
             System.out.println("\nSesuai");
@@ -49,6 +48,7 @@ public class AnalisisKelas extends KontrolKelas {
 
     }
 
+    @Override
     String AnalisisKelistrikan() {
         if (getJmlStopKontak() == 2 || getJmlStopKontak() == 3 && getKondStopKontak() == 1 && getPosStopKontak() == 1) {
             System.out.println("\nSesuai");
@@ -59,6 +59,7 @@ public class AnalisisKelas extends KontrolKelas {
         }
     }
 
+    @Override
     String AnalisisLCD() {
         if (getJmlKblLCD() == 2 && getKondKabelLCD() == 1 && getPosKabelLCD() == 1) {
             System.out.println("\nSesuai");
@@ -70,6 +71,7 @@ public class AnalisisKelas extends KontrolKelas {
 
     }
 
+    @Override
     String AnalisisLampu() {
         if (getJmlLampu() == 2 || getJmlLampu() == 3 && getKondLampu() == 1 && getPosLampu() == 1) {
             System.out.println("\nSesuai");
@@ -80,6 +82,7 @@ public class AnalisisKelas extends KontrolKelas {
         }
     }
 
+    @Override
     String AnalisisKipasAngin() {
 
         if (getJmlKipas() == 2 || getJmlKipas() == 3 && getKondKipas() == 1 && getPosKipas() == 1) {
@@ -92,6 +95,7 @@ public class AnalisisKelas extends KontrolKelas {
 
     }
 
+    @Override
     String AnalisisAC() {
 
         if (getJmlAC() == 2 || getJmlAC() == 3 && getKondAC() == 1 && getPosAC() == 1) {
@@ -103,6 +107,7 @@ public class AnalisisKelas extends KontrolKelas {
         }
     }
 
+    @Override
     String AnalisisInternet() {
         if (getSSID() == 1 && getBandwidth() == 1) {
             System.out.println("\nSesuai");
@@ -113,6 +118,7 @@ public class AnalisisKelas extends KontrolKelas {
         }
     }
 
+    @Override
     String AnalisisCCTV() {
         if (getJmlCCTV() == 3 && getKondCCTV() == 1 && getPosCCTV() == 1 || getPosCCTV() == 3) {
             System.out.println("\nSesuai");
@@ -123,6 +129,7 @@ public class AnalisisKelas extends KontrolKelas {
         }
     }
 
+    @Override
     String AnalisisKebersihan() {
         if (getKondLantai().equals("bersih") && getKondDinding().equals("bersih") && getKondAtap().equals("bersih")
                 && getKondPintu().equals("bersih") && getKondJendela().equals("bersih")) {
@@ -134,6 +141,7 @@ public class AnalisisKelas extends KontrolKelas {
         }
     }
 
+    @Override
     String AnalisisSirkulasiUdara() {
         if (getSirkulasiUdara().equals("lancar")) {
             System.out.println("\nSesuai");
@@ -144,6 +152,7 @@ public class AnalisisKelas extends KontrolKelas {
         }
     }
 
+    @Override
     String AnalisisPencahayaan() {
         if (getPencahayaan() >= 250 && getPencahayaan() <= 350) {
             System.out.println("\nSesuai");
@@ -154,6 +163,7 @@ public class AnalisisKelas extends KontrolKelas {
         }
     }
 
+    @Override
     String AnalisisKelembapan() {
         if (getKelembapan() >= 70 && getKelembapan() <= 80) {
             System.out.println("\nSesuai");
@@ -164,6 +174,7 @@ public class AnalisisKelas extends KontrolKelas {
         }
     }
 
+    @Override
     String AnalisisSuhu() {
         if (getSuhu() >= 25 && getSuhu() <= 35) {
             System.out.println("\nSesuai");
@@ -175,6 +186,7 @@ public class AnalisisKelas extends KontrolKelas {
 
     }
 
+    @Override
     String AnalisisKebisingan() {
         if (getKebisingan().equals("tidak bising")) {
             System.out.println("\nSesuai");
@@ -185,6 +197,7 @@ public class AnalisisKelas extends KontrolKelas {
         }
     }
 
+    @Override
     String AnalisisBau() {
 
         if (getBau().equals("tidak bau")) {
@@ -196,6 +209,7 @@ public class AnalisisKelas extends KontrolKelas {
         }
     }
 
+    @Override
     String AnalisisKebocoran() {
         if (getKebocoran().equals("tidak bocor")) {
             System.out.println("\nSesuai");
@@ -207,6 +221,7 @@ public class AnalisisKelas extends KontrolKelas {
 
     }
 
+    @Override
     String AnalisisKerusakan() {
 
         if (getKerusakan().equals("tidak rusak")) {
@@ -219,6 +234,7 @@ public class AnalisisKelas extends KontrolKelas {
 
     }
 
+    @Override
     String AnalisisKeausan() {
 
         if (getKeausan().equals("tidak aus")) {
@@ -231,6 +247,7 @@ public class AnalisisKelas extends KontrolKelas {
 
     }
 
+    @Override
     String AnalisisKekokohan() {
         if (getKekokohan().equals("kokoh")) {
             System.out.println("\nSesuai");
@@ -241,6 +258,7 @@ public class AnalisisKelas extends KontrolKelas {
         }
     }
 
+    @Override
     String AnalisisKunciPintudanJendela() {
         if (getKunciJendela().equals("ada")) {
             System.out.println("\nSesuai");
@@ -252,6 +270,7 @@ public class AnalisisKelas extends KontrolKelas {
 
     }
 
+    @Override
     String AnalisisKeamananRuang() {
         if (getAman().equals("aman")) {
             System.out.println("\nSesuai");
@@ -261,6 +280,18 @@ public class AnalisisKelas extends KontrolKelas {
             return "Tidak Sesuai";
         }
 
+    }
+
+    @Override
+    public double HitungRasio() {
+        double Rasio = HitungLuas() / getJmlKursi();
+        return Rasio;
+    }
+
+    @Override
+    public double HitungLuas() {
+        double Luas = getPanjang() * getLebar();
+        return Luas;
     }
 
 }
