@@ -7,104 +7,71 @@ package org.netbeans.modules.TB2C;
 
 import java.util.Scanner;
 
-/**
- *
- * @author Gangga
- */
+
+import java.util.Scanner;
+
 public class TesRuangKelas {
 
     public static void main(String[] args) {
+        String namaRuang;
+        String lokasi;
+        String fakultas;
+        
         Scanner in = new Scanner(System.in);
-        CetakKelas Laptop = new CetakKelas(null, null);
+        KontrolKelas Laptop = new KontrolKelas();
 
+        System.out.println("Masukkan Nama Ruang : ");
+        namaRuang = in.nextLine();
+        System.out.println("\nMasukkan Lokasi : ");
+        lokasi = in.nextLine();
+            
         //identitas Ruang Kelas
-        System.out.println("Apakah Anda Mahasiswa Fakultas Teknik Informatika :         - ( ya atau tidak ) -");
+        System.out.println("\nApakah Anda Mahasiswa Fakultas Teknik Informatika :         - ( ya atau tidak ) -");
         String jawab = in.nextLine();
-        if (jawab.equals("ya")){
-            Laptop.IdentitasKelas(null, null);
-        }else{
-            Laptop.IdentitasKelas(null, null, null);
+        if (jawab.equals("ya")) {
+            Laptop.IdentitasKelas(namaRuang, lokasi);
+        } else {
+            System.out.println("\nMasukkan Nama Fakultas : ");
+            fakultas = in.nextLine();
+            Laptop.IdentitasKelas(namaRuang, lokasi, fakultas);
         }
 
         //Kondisi Ruang Kelas
         Laptop.PerhitunganKelas();
-        Laptop.AnalisisLuasRuang();
-        Laptop.CetakLuasKelas();
-        Laptop.AnalisisRasioLuas();
-        Laptop.CetakRasioRuangKelas();
         Laptop.JumlahPintuDanJendela();
-        Laptop.CetakJumlahPintudanJendela();
-        Laptop.AnalisisJumlahPintudanJendela();
 
         //Jumlah, Kondisi dan Posisi Sarana
         Laptop.Kelistrikan();
-        Laptop.CetakKelistrikan();
-        Laptop.AnalisisKelistrikan();
         Laptop.LCD();
-        Laptop.CetakLCD();
-        Laptop.AnalisisLCD();
         Laptop.Lampu();
-        Laptop.CetakLampu();
-        Laptop.AnalisisLampu();
         Laptop.KipasAngin();
-        Laptop.CetakKipasAngin();
-        Laptop.AnalisisKipasAngin();
         Laptop.AC();
-        Laptop.CetakAC();
-        Laptop.AnalisisAC();
         Laptop.Intrnet();
-        Laptop.CetakInternet();
-        Laptop.AnalisisInternet();
         Laptop.CCTV();
-        Laptop.CetakCCTV();
-        Laptop.AnalisisCCTV();
 
         //Lingkungan Ruang Kelas
         Laptop.Kebersihan();
-        Laptop.CetakKebersihan();
-        Laptop.AnalisisKebersihan();
 
         //Kebersihan Ruang Kelas
         Laptop.SirkulasiUdara();
-        Laptop.CetakSirklusiUdara();
-        Laptop.AnalisisSirkulasiUdara();
         Laptop.Pencahayaan();
-        Laptop.CetakPencahayaan();
-        Laptop.AnalisisPencahayaan();
         Laptop.Kelembapan();
-        Laptop.CetakKelembapan();
-        Laptop.AnalisisKelembapan();
         Laptop.Suhu();
-        Laptop.CetakSuhu();
-        Laptop.AnalisisSuhu();
 
         //Kenyamanan Ruang Kelas
         Laptop.Kebisingan();
-        Laptop.CetakKebisingan();
-        Laptop.AnalisisKebisingan();
         Laptop.Bau();
-        Laptop.CetakBau();
-        Laptop.AnalisisBau();
         Laptop.Kebocoran();
-        Laptop.CetakKebocoran();
-        Laptop.AnalisisKebocoran();
         Laptop.Kerusakan();
-        Laptop.CetakKerusakan();
-        Laptop.AnalisisKerusakan();
         Laptop.Keausan();
-        Laptop.CetakKeausan();
-        Laptop.AnalisisKeausan();
 
         //Keamanan Ruang Kelas
         Laptop.Kekokohan();
-        Laptop.CetakKekokohan();
-        Laptop.AnalisisKekokohan();
         Laptop.KunciPintudanJendela();
-        Laptop.CetakKunciPintuJendela();
-        Laptop.AnalisisKunciPintudanJendela();
         Laptop.KeamananRuang();
-        Laptop.CetakKeamanan();
-        Laptop.AnalisisKeamananRuang();
+
+        //Analisis dan Output Ruang Kelas
+        Laptop.AnalisisDanOutput();
 
     }
 }

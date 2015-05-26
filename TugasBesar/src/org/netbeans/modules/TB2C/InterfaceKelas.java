@@ -7,4 +7,5 @@ package org.netbeans.modules.TB2C;
 
 public interface InterfaceKelas {
     public double HitungLuas();
+    public double HitungRasio();
 }
