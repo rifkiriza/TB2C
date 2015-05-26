@@ -8,54 +8,91 @@ package org.netbeans.modules.TB2C;
 import java.util.Scanner;
 
 
-public class KontrolKelas extends RuangKelas implements InterfaceKelas {
+public class KontrolKelas {
 
     Scanner in = new Scanner(System.in);
+    CetakKelas Comp = new CetakKelas();
 
-    public KontrolKelas(String namaRuang, String lokasi) {
-        super(namaRuang, lokasi);
+    void AnalisisDanOutput() {
+        //Kondisi Ruang Kelas
+        Comp.CetakLuasKelas();
+        Comp.AnalisisLuasRuang();
+        Comp.CetakRasioRuangKelas();
+        Comp.AnalisisRasioLuas();
+        Comp.CetakJumlahPintudanJendela();
+        Comp.AnalisisJumlahPintudanJendela();
+
+        //Jumlah, Posisi dan Rencana
+        Comp.CetakKelistrikan();
+        Comp.AnalisisKelistrikan();
+        Comp.CetakLCD();
+        Comp.AnalisisLCD();
+        Comp.CetakLampu();
+        Comp.AnalisisLampu();
+        Comp.CetakKipasAngin();
+        Comp.AnalisisKipasAngin();
+        Comp.CetakAC();
+        Comp.AnalisisAC();
+        Comp.CetakInternet();
+        Comp.AnalisisInternet();
+        Comp.CetakCCTV();
+        Comp.AnalisisCCTV();
+
+        //Kebersihan Ruang Kelas
+        Comp.CetakKebersihan();
+        Comp.AnalisisKebersihan();
+        Comp.CetakSirklusiUdara();
+        Comp.AnalisisSirkulasiUdara();
+        Comp.CetakPencahayaan();
+        Comp.AnalisisPencahayaan();
+        Comp.CetakKelembapan();
+        Comp.AnalisisKelembapan();
+        Comp.CetakSuhu();
+        Comp.AnalisisSuhu();
+
+        //Kenyamannan Ruang Kelas
+        Comp.CetakKebisingan();
+        Comp.AnalisisKebisingan();
+        Comp.CetakBau();
+        Comp.AnalisisBau();
+        Comp.CetakKebocoran();
+        Comp.AnalisisKebocoran();
+        Comp.CetakKerusakan();
+        Comp.AnalisisKerusakan();
+        Comp.CetakKeausan();
+        Comp.AnalisisKeausan();
+
+        //Keamanan Ruang Kelas
+        Comp.CetakKekokohan();
+        Comp.AnalisisKekokohan();
+        Comp.CetakKunciPintuJendela();
+        Comp.AnalisisKunciPintudanJendela();
+        Comp.CetakKeamanan();
+        Comp.AnalisisKeamananRuang();
     }
 
-    @Override
+    
     void IdentitasKelas(String namaRuang, String lokasi) {
-        System.out.println("\n - Identias Ruang Kelas -\n");
-        System.out.println("Nama Ruang      : ");
-        setNamaRuang(in.nextLine());
-        System.out.println("Lokasi Ruang    : ");
-        setLokasi(in.nextLine());
+        Comp.setNamaRuang(namaRuang);
+        Comp.setLokasi(lokasi);
+
     }
 
-    @Override
     void IdentitasKelas(String namaRuang, String lokasi, String fakultas) {
-        System.out.println("\n - Identias Ruang Kelas -\n");
-        System.out.println("Nama Ruang      : ");
-        setNamaRuang(in.nextLine());
-        System.out.println("Lokasi Ruang    : ");
-        setLokasi(in.nextLine());
-        System.out.println("Nama Fakultas   : ");
-        setFakultas(in.nextLine());
-    }
-
-    //Identitas Ruang Kelas
-    void identitasRuang() {
-        System.out.println(" - Identias Ruang Kelas -\n");
-        System.out.println("Nama Ruang      : ");
-        setNamaRuang(in.nextLine());
-        System.out.println("Lokasi Ruang    : ");
-        setLokasi(in.nextLine());
-        System.out.println("Nama Fakultas   : ");
-        setFakultas(in.nextLine());
+        Comp.setNamaRuang(namaRuang);
+        Comp.setLokasi(lokasi);
+        Comp.setFakultas(fakultas);
     }
 
     //Kondisi Ruang Kelas
     void PerhitunganKelas() {
         System.out.println("\n - Kondisi Ruang Kelas - \n");
         System.out.println("Panjang Ruang       : ");
-        setPanjang(in.nextInt());
+        Comp.setPanjang(in.nextInt());
         System.out.println("Lebar Ruang         : ");
-        setLebar(in.nextInt());
+        Comp.setLebar(in.nextInt());
         System.out.println("\nJumlah Kursi      : ");
-        setJmlKursi(in.nextInt());
+        Comp.setJmlKursi(in.nextInt());
 
     }
 
@@ -63,9 +100,9 @@ public class KontrolKelas extends RuangKelas implements InterfaceKelas {
         System.out.println("\nJumlah Pintu        1. 1    2. 2    3. 4");
         System.out.println("Jumlah Jendela      1. 0    2. 1    3. 4");
         System.out.println("\nJumlah Pintu      : ");
-        setJmlPintu(in.nextInt());
+        Comp.setJmlPintu(in.nextInt());
         System.out.println("Jumlah Jendela  : ");
-        setJmlJendela(in.nextInt());
+        Comp.setJmlJendela(in.nextInt());
 
     }
 
@@ -76,11 +113,11 @@ public class KontrolKelas extends RuangKelas implements InterfaceKelas {
         System.out.println("Kondisi Stop Kontak     1. Baik                     :  2. Kurang Baik   :  3. Rusak");
         System.out.println("Posisi Stop Kontak      1. Di Pojok dan Dekat Dosen :  2. Di Tengah     :  3. Di Bawah");
         System.out.println("\nJumlah Stop Kontak        : ");
-        setJmlStopKontak(in.nextInt());
+        Comp.setJmlStopKontak(in.nextInt());
         System.out.println("Kondisi Stop Kontak     : ");
-        setKondStopKontak(in.nextInt());
+        Comp.setKondStopKontak(in.nextInt());
         System.out.println("Posisi Stop Kontak      : ");
-        setPosStopKontak(in.nextInt());
+        Comp.setPosStopKontak(in.nextInt());
 
     }
 
@@ -89,11 +126,11 @@ public class KontrolKelas extends RuangKelas implements InterfaceKelas {
         System.out.println("Kondisi Kabel LCD       1. Berfungsi   :   2. Kurang Baik   :   3. Rusak");
         System.out.println("Posisi Kabel LCD        1. Dekat Dosen :   2. Dekat Pintu   :   3. Dekat Lampu");
         System.out.println("\nJumlah Kabel LCD      : ");
-        setJmlKblLCD(in.nextInt());
+        Comp.setJmlKblLCD(in.nextInt());
         System.out.println("Kondisi Kabel lCD   : ");
-        setKondKabelLCD(in.nextInt());
+        Comp.setKondKabelLCD(in.nextInt());
         System.out.println("Posisi Kabel LCD    : ");
-        setPosKabelLCD(in.nextInt());
+        Comp.setPosKabelLCD(in.nextInt());
 
     }
 
@@ -102,11 +139,11 @@ public class KontrolKelas extends RuangKelas implements InterfaceKelas {
         System.out.println("Kondisi Lampu   1. Baik   :   2. Kurang Baik   :   3. Rusak");
         System.out.println("Posisi Lampu    1. Atap   :   2. Bawah         :   3. Samping");
         System.out.println("\nJumlah Lampu      : ");
-        setJmlLampu(in.nextInt());
+        Comp.setJmlLampu(in.nextInt());
         System.out.println("Kondisi Lampu   : ");
-        setKondLampu(in.nextInt());
+        Comp.setKondLampu(in.nextInt());
         System.out.println("Posisi Lampu    : ");
-        setPosLampu(in.nextInt());
+        Comp.setPosLampu(in.nextInt());
     }
 
     void KipasAngin() {
@@ -114,11 +151,11 @@ public class KontrolKelas extends RuangKelas implements InterfaceKelas {
         System.out.println("Kondisi Kipas Angin     1. Baik   :   2. Kurang Baik   :   3. Rusak");
         System.out.println("Posisi Kipas Angin      1. Atap   :   2. Bawah         :   3. Samping");
         System.out.println("\nJumlah Kipas Angin        : ");
-        setJmlKipas(in.nextInt());
+        Comp.setJmlKipas(in.nextInt());
         System.out.println("Kondisi Kipas Angin     : ");
-        setKondKipas(in.nextInt());
+        Comp.setKondKipas(in.nextInt());
         System.out.println("Posisi Kipas Angin      : ");
-        setPosKipas(in.nextInt());
+        Comp.setPosKipas(in.nextInt());
     }
 
     void AC() {
@@ -126,11 +163,11 @@ public class KontrolKelas extends RuangKelas implements InterfaceKelas {
         System.out.println("Kondisi AC      1. Baik    :   2. Kurang Baik   :   3. Rusak");
         System.out.println("Posisi AC       1. Depan   :   2. Samping       :   3. Belakang");
         System.out.println("\nJumlah AC         : ");
-        setJmlAC(in.nextInt());
+        Comp.setJmlAC(in.nextInt());
         System.out.println("Kondisi AC      : ");
-        setKondAC(in.nextInt());
+        Comp.setKondAC(in.nextInt());
         System.out.println("Posisi AC       : ");
-        setPosAC(in.nextInt());
+        Comp.setPosAC(in.nextInt());
 
     }
 
@@ -138,9 +175,9 @@ public class KontrolKelas extends RuangKelas implements InterfaceKelas {
         System.out.println("\nPilih SSID      1. UMM Hotspot  :   2. Riza Hotspot    :  3. Gangga Hotspot   :   4. Adi Hotspot");
         System.out.println("Konektifitas    1. Bisa Login   :   2. Tidak Bisa Login");
         System.out.println("\nPilih SSID        : ");
-        setSSID(in.nextInt());
+        Comp.setSSID(in.nextInt());
         System.out.println("Konektifitas    : ");
-        setBandwidth(in.nextInt());
+        Comp.setBandwidth(in.nextInt());
 
     }
 
@@ -149,11 +186,11 @@ public class KontrolKelas extends RuangKelas implements InterfaceKelas {
         System.out.println("Kondisi CCTV    1. Baik    :   2. Kurang Baik    :    3. Rusak");
         System.out.println("Posisi CCTV     1. Depan   :   2. Samping        :    3. Belakang");
         System.out.println("\nJumlah CCTV       : ");
-        setJmlCCTV(in.nextInt());
+        Comp.setJmlCCTV(in.nextInt());
         System.out.println("Kondisi CCTV    : ");
-        setKondCCTV(in.nextInt());
+        Comp.setKondCCTV(in.nextInt());
         System.out.println("Posisi CCTV     : ");
-        setPosCCTV(in.nextInt());
+        Comp.setPosCCTV(in.nextInt());
 
     }
 
@@ -161,15 +198,15 @@ public class KontrolKelas extends RuangKelas implements InterfaceKelas {
     void Kebersihan() {
         System.out.println("\n - Lingkungan Ruang Kelas -");
         System.out.println("\nKondisi Lantai        : ");
-        setKondLantai(in.next());
+        Comp.setKondLantai(in.next());
         System.out.println("Kondisi Dinding     : ");
-        setKondDinding(in.next());
+        Comp.setKondDinding(in.next());
         System.out.println("Kondisi Atap        : ");
-        setKondAtap(in.next());
+        Comp.setKondAtap(in.next());
         System.out.println("Kondisi Pintu       : ");
-        setKondPintu(in.next());
+        Comp.setKondPintu(in.next());
         System.out.println("Kondisi Jendela     : ");
-        setKondJendela(in.next());
+        Comp.setKondJendela(in.next());
 
     }
 
@@ -177,25 +214,25 @@ public class KontrolKelas extends RuangKelas implements InterfaceKelas {
     void SirkulasiUdara() {
         System.out.println("\n - Kebersihan Ruang Kelas -");
         System.out.println("\nSirkulasi Udara   : ");
-        setSirkulasiUdara(in.next());
+        Comp.setSirkulasiUdara(in.next());
 
     }
 
     void Pencahayaan() {
         System.out.println("\nNilai Pencahayaan : ");
-        setPencahayaan(in.nextInt());
+        Comp.setPencahayaan(in.nextInt());
 
     }
 
     void Kelembapan() {
         System.out.println("\nKelembapan        : ");
-        setKelembapan(in.nextInt());
+        Comp.setKelembapan(in.nextInt());
 
     }
 
     void Suhu() {
         System.out.println("\nSuhu              : ");
-        setSuhu(in.nextInt());
+        Comp.setSuhu(in.nextInt());
 
     }
 
@@ -203,31 +240,31 @@ public class KontrolKelas extends RuangKelas implements InterfaceKelas {
     void Kebisingan() {
         System.out.println("\n - Kenyamanan Ruang Kelas -");
         System.out.println("\nKebisingan    : ");
-        setKebisingan(in.nextLine());
+        Comp.setKebisingan(in.nextLine());
 
     }
 
     void Bau() {
         System.out.println("\nBau   : ");
-        setBau(in.nextLine());
+        Comp.setBau(in.nextLine());
 
     }
 
     void Kebocoran() {
         System.out.println("\nKebocoran     : ");
-        setKebocoran(in.nextLine());
+        Comp.setKebocoran(in.nextLine());
 
     }
 
     void Kerusakan() {
         System.out.println("\nKerusakan     : ");
-        setKerusakan(in.nextLine());
+        Comp.setKerusakan(in.nextLine());
 
     }
 
     void Keausan() {
         System.out.println("\nKeausan   : ");
-        setKeausan(in.nextLine());
+        Comp.setKeausan(in.nextLine());
 
     }
 
@@ -235,32 +272,20 @@ public class KontrolKelas extends RuangKelas implements InterfaceKelas {
     void Kekokohan() {
         System.out.println("\n - Keamanan Ruang Kelas -");
         System.out.println("\nKekokohan     : ");
-        setKekokohan(in.next());
+        Comp.setKekokohan(in.next());
 
     }
 
     void KunciPintudanJendela() {
         System.out.println("\nKunci Pintu dan Jendela : ");
-        setKunciJendela(in.next());
+        Comp.setKunciJendela(in.next());
 
     }
 
     void KeamananRuang() {
         System.out.println("\nKeamanan  : ");
-        setAman(in.next());
+        Comp.setAman(in.next());
 
-    }
-
-    @Override
-    public double HitungRasio() {
-        double Rasio = HitungLuas() / getJmlKursi();
-        return Rasio;
-    }
-
-    @Override
-    public double HitungLuas() {
-        double Luas = getPanjang() * getLebar();
-        return Luas;
     }
 
 }

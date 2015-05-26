@@ -5,6 +5,10 @@
  */
 package org.netbeans.modules.TB2C;
 
+/**
+ *
+ * @author Riza7
+ */
 public abstract class RuangKelas {
 
     /**
@@ -76,22 +80,6 @@ public abstract class RuangKelas {
     private String kunciPintu;
     private String kunciJendela;
     private String aman;
-
-    public RuangKelas(String namaRuang, String lokasi) {
-        this.namaRuang = namaRuang;
-        this.lokasi = lokasi;
-    }
-
-    void IdentitasKelas(String namaRuang, String lokasi) {
-        this.namaRuang = namaRuang;
-        this.lokasi = lokasi;
-    }
-
-    void IdentitasKelas(String namaRuang, String lokasi, String fakultas) {
-        this.namaRuang = namaRuang;
-        this.lokasi = lokasi;
-        this.fakultas = fakultas;
-    }
 
     public String getNamaRuang() {
         return namaRuang;
@@ -485,5 +473,49 @@ public abstract class RuangKelas {
         this.HitungRasioLuas = HitungRasioLuas;
     }
 
-    public abstract double HitungRasio();
+    abstract String AnalisisLuasRuang();
+
+    abstract String AnalisisRasioLuas();
+
+    abstract String AnalisisJumlahPintudanJendela();
+
+    abstract String AnalisisKelistrikan();
+
+    abstract String AnalisisLCD();
+
+    abstract String AnalisisLampu();
+
+    abstract String AnalisisKipasAngin();
+
+    abstract String AnalisisAC();
+
+    abstract String AnalisisInternet();
+
+    abstract String AnalisisCCTV();
+
+    abstract String AnalisisKebersihan();
+
+    abstract String AnalisisSirkulasiUdara();
+
+    abstract String AnalisisPencahayaan();
+
+    abstract String AnalisisKelembapan();
+
+    abstract String AnalisisSuhu();
+
+    abstract String AnalisisKebisingan();
+
+    abstract String AnalisisBau();
+
+    abstract String AnalisisKebocoran();
+
+    abstract String AnalisisKerusakan();
+
+    abstract String AnalisisKeausan();
+
+    abstract String AnalisisKekokohan();
+
+    abstract String AnalisisKunciPintudanJendela();
+
+    abstract String AnalisisKeamananRuang();
 }
